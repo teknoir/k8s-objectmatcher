@@ -27,7 +27,7 @@ import (
 	"k8s.io/apimachinery/pkg/runtime"
 )
 
-const LastAppliedConfig = "banzaicloud.com/last-applied"
+const LastAppliedConfig = "teknoir.org/last-applied"
 
 var DefaultAnnotator = NewAnnotator(LastAppliedConfig)
 
