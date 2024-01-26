@@ -1,16 +1,6 @@
-![license](http://img.shields.io/badge/license-Apache%20v2-orange.svg)
-
 # Kubernetes object matcher
 
 K8S-ObjectMatcher is a Golang library which helps to match Kubernetes objects.
-
-### Motivation
-
-Here at Banzai Cloud we love and write lots of Kubernetes [operators](https://github.com/banzaicloud?utf8=✓&q=operator&type=&language=). While writing some complex operators as the [Istio](https://github.com/banzaicloud/istio-operator) , [Vault](https://github.com/banzaicloud/bank-vaults) or [Kafka](https://github.com/banzaicloud/kafka-operator) operator, we encountered a huge amount of **unnecessary Kubernetes object updates**. Most of the operators out there are using `reflect.DeepEquals` to match the given object's `Spec`. Unfortunately, this solution is not perfect because every Kubernetes object is amended with different default values while submitted. This library aims to provide finer object matching capabilities to avoid unnecessary updates and more observability on the client side.
-
-### Legacy version deprecation notice
-
-There is a legacy version of the lib, that is now deprecated and documented here: [docs/legacy.md](docs/legacy.md)
 
 ### How does it work?
 
@@ -97,13 +87,6 @@ This is required because map fields using `patchStrategy:"replace"` will always 
 This CalculateOption removes the field provided (as a string) in the call before comparing them. A common usage might be to remove the metadata fields by using the `IgnoreField("metadata")` option.
 
 
-## Contributing
-
-If you find this project useful here's how you can help:
-
-- Send a pull request with your new features and bug fixes
-- Help new users with issues they may encounter
-- Support the development of this project and star this repo!
 
 ## License
 
